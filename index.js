@@ -25,6 +25,12 @@ inquirer
       message: "What is this project usage for?",
     },
     {
+      type: "list",
+      name: "license",
+      message: "Chose the appropriate license for this project: ",
+      choices: ["Apache", "Academic", "GNU", "ISC", "MIT", "Mozilla", "Open"],
+    },
+    {
       type: "input",
       name: "contributing",
       message: "Who are the contributors of this projects?",
@@ -47,21 +53,40 @@ inquirer
   ])
   .then((data) => {
     console.log("Generating HTML");
-    const readmeString = ` ${data.project}
+    const readmeString = ` # ${data.project}
 
-    Description: ${data.description}
+    ## Table of Contents
+    - [Description](#description)
+    - [Installation] Proccess(#install)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Deployable] Link(#link)
+    - [FAQ's](#faq)
+    - [Contact](#contact)
+
+    ## Description: 
+    ${data.description}
     
-    Installation Proccess(if needed): ${data.installation}
+    ## Installation Proccess(if needed): 
+    ${data.installation}
     
-    Usage: ${data.usage}
+    ## Usage: 
+    ${data.usage}
+
+    ## License: 
+    ${data.license}
     
-    Contributors: ${data.contributing}
+    ## Contributors: 
+    ${data.contributing}
     
     ${data.link}
     
-    FAQ: ${data.questions}
+    ## FAQ: 
+    ${data.questions}
     
-    Contact Info: ${data.contact}`;
+    ## Contact Info: 
+    ${data.contact}`;
+
     fs.writeFile("README.md", readmeString, (err) =>
       err ? console.log(err) : console.log("Success!")
     );
