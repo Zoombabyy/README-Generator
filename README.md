@@ -1,35 +1,45 @@
-# README Generator
+# README-Generator
 
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation] Proccess(#install)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Deployable] Link(#link)
-    - [FAQ's](#faq)
-    - [Contact](#contact)
+## Table of Contents
 
-    ## Description:
+- [Description](#description)
+- [Guide](#guide)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [FAQ's](#faq)
+- [Contact](#contact)
+
+## Description:
+
     A node.js application that uses user input from inquirer to populate a README.md file for user repository.
 
-    ## Installation Proccess(if needed):
+## Guide
+
+[Guide](https://drive.google.com/file/d/1JXVW8rf3uxyNc80iFn40-KyngzJTVJn7/view)
+
+## Installation (if needed):
+
     npm init
-    npm i inquirer
+    npm i
 
-    ## Usage:
-    Run the following command at th root of your project and answer the prompted questions:
-    node index.js
+## Usage:
 
-    ## License:
+     Run the following command at th root of your project and answer the prompted questions:
+     node index.js
+
+## License:
+
     Open
 
-    ## Contributors:
+## Contributors:
+
     Travis Saucedo
 
-    https://github.com/Zoombabyy/README-Generator
+## FAQ:
 
-    ## FAQ:
     Contact me for any issues
 
-    ## Contact Info:
-    travissaucedo2514@gmail.com
+## Contact Info:
+
+    Travissaucedo2514@gmail.com

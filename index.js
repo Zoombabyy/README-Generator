@@ -37,11 +37,6 @@ inquirer
     },
     {
       type: "input",
-      name: "link",
-      message: "Please enter a link for your project",
-    },
-    {
-      type: "input",
       name: "questions",
       message: "What do I do if I have an issue? ",
     },
@@ -55,36 +50,35 @@ inquirer
     console.log("Generating HTML");
     const readmeString = ` # ${data.project}
 
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation] Proccess(#install)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Deployable] Link(#link)
-    - [FAQ's](#faq)
-    - [Contact](#contact)
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [FAQ's](#faq)
+  - [Contact](#contact)
 
-    ## Description: 
+  ## Description: 
     ${data.description}
     
-    ## Installation Proccess(if needed): 
+  ## Installation (if needed): 
     ${data.installation}
     
-    ## Usage: 
+  ## Usage: 
     ${data.usage}
 
-    ## License: 
+  ## License: 
     ${data.license}
     
-    ## Contributors: 
+  ## Contributors: 
     ${data.contributing}
     
     ${data.link}
     
-    ## FAQ: 
+  ## FAQ: 
     ${data.questions}
     
-    ## Contact Info: 
+  ## Contact Info: 
     ${data.contact}`;
 
     fs.writeFile("README.md", readmeString, (err) =>
